@@ -42,7 +42,7 @@ const sendErrorDev = (err, req, res) => {
   }
 
   // B) Rendered Website
-  console.log(err);
+  // console.log(err);
   return res.status(err.statusCode).render('error', {
     title: 'Something went wrong',
     msg: err.message,
@@ -61,7 +61,7 @@ const sendErrorProd = (err, req, res) => {
     }
     // Programming or other unknown error
     // 1) Log error
-    console.log(err);
+    // console.log(err);
 
     //2) Generic message
     return res.status(500).json({
@@ -78,7 +78,7 @@ const sendErrorProd = (err, req, res) => {
   }
   // Programming or other unknown error
   //1) Log error
-  console.log(err);
+  // console.log(err);
 
   // 2) Generic message
   return res.status(err.statusCode).render('error', {

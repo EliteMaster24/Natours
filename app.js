@@ -44,7 +44,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'", "'https:'"],
-      connectSrc: ["'self'", ...connectSrcUrls],
+      connectSrc: ["'self'", ...connectSrcUrls, 'https://bundle.js:*'],
       scriptSrc: ["'self'", ...scriptSrcUrls, 'https://js.stripe.com'],
       frameSrc: ["'self'", 'https://js.stripe.com'],
       styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
